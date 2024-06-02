@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <router-view></router-view>
-    <Footer></Footer>
+    <Footer v-show="$route.meta.footerShow"></Footer>
   </div>
 </template>
 
@@ -19,4 +19,8 @@ export default {
 </script>
 
 <style>
+#app {
+  min-height: 800px;
+  position: relative;
+}
 </style>
