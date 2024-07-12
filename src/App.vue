@@ -20,7 +20,8 @@ export default {
 
 <style>
 #app {
-  min-height: 800px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 </style>

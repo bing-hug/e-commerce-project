@@ -73,3 +73,8 @@ a:link:hover{
     clear: both;
     visibility: hidden;
 }
+
+/*百分百高度*/
+html, body{
+    height: 100%;
+}

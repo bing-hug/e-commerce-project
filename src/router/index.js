@@ -22,37 +22,37 @@ export default new VueRouter({
         },
         {
             path: '/home',
+            name: 'Home',
             component: Home,
-            meta:{
+            meta: {
                 footerShow: true,
 
             }
         },
         {
             path: '/login',
+            name: 'Login',
             component: Login,
-            meta:{
+            meta: {
                 footerShow: false,
 
             }
         },
         {
             path: '/register',
+            name: 'Register',
             component: Register,
-            meta:{
+            meta: {
                 footerShow: false,
-
             }
         },
         {
-            path: '/search',
+            path: '/search/:keyword',
+            name: 'Search',
             component: Search,
-            meta:{
+            meta: {
                 footerShow: true,
-
             }
         },
-
-
     ]
 })

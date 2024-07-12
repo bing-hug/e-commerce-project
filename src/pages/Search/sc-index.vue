@@ -1,6 +1,9 @@
 <script>
 export default {
-  name: "sc-index"
+  name: "sc-index",
+  mounted() {
+    console.log(this.$route.params.keyword);
+  }
 }
 </script>
 

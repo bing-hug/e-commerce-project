@@ -1,10 +1,15 @@
 <script>
 export default {
   name: "hd-index",
+  data(){
+    return {
+      searchKeyword: ''
+    }
+  },
   methods: {
     goSearchPage(){
-      console.log(document.querySelector('#search').value);
-      this.$router.push('/search');
+      console.log(this.searchKeyword)
+      this.$router.push({name:'Search', params: {keyword: this.searchKeyword}, query: {k: this.searchKeyword}});
     }
   }
 }
@@ -45,7 +50,7 @@ export default {
       </h1>
       <div class="searchArea">
         <form action="###" class="searchForm">
-          <input type="text" id="search" class="input-error input-xxlarge" />
+          <input type="text" id="search" class="input-error input-xxlarge" v-model="searchKeyword"/>
           <button class="sui-btn btn-xlarge btn-danger" type="button" @click="goSearchPage()">搜索</button>
         </form>
       </div>

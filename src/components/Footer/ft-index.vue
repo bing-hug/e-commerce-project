@@ -106,8 +106,7 @@ export default {
 <style scoped lang="scss">
 .footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
   background-color: #eaeaea;
 
   .footer-container {
