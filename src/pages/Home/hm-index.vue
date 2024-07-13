@@ -5,6 +5,8 @@ import rank from '@/pages/Home/rank/rank-index.vue'
 import like from '@/pages/Home/like/like-index.vue'
 import floor from '@/pages/Home/floor/floor-index.vue'
 import brand from '@/pages/Home/brand/brand-index.vue'
+
+
 export default {
   name: "hm-index",
   components: {
@@ -14,7 +16,7 @@ export default {
     like,
     floor,
     brand
-  }
+  },
 }
 </script>
 
