@@ -5,7 +5,7 @@ import rank from '@/pages/Home/rank/rank-index.vue'
 import like from '@/pages/Home/like/like-index.vue'
 import floor from '@/pages/Home/floor/floor-index.vue'
 import brand from '@/pages/Home/brand/brand-index.vue'
-
+import { mapState } from "vuex";
 
 export default {
   name: "hm-index",
@@ -17,6 +17,13 @@ export default {
     floor,
     brand
   },
+  mounted() {
+    this.$store.dispatch('home/getFloorList');
+  },
+  computed: {
+    ...mapState('home', ['floorList'])
+  }
+
 }
 </script>
 
@@ -27,9 +34,9 @@ export default {
     <todayRecommend/>
     <rank/>
     <like/>
-    <floor/>
+    <floor v-for="floor in floorList" :key="floor.id" :floor="floor"/>
     <brand/>
-  </div>
+   </div>
 </template>
 
 <style scoped lang="scss">

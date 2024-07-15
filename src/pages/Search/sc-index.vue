@@ -1,14 +1,11 @@
 <script>
 export default {
   name: "sc-index",
-  mounted() {
-    console.log(this.$route.params.keyword);
-  }
 }
 </script>
 
 <template>
-  <div>我是搜索页</div>
+  <typeNav/>
 </template>
 
 <style scoped lang="scss">
