@@ -45,9 +45,9 @@ export default {
     //跳转搜索页
     goSearchPage(event){
       let target = event.target;
-      let {catename, catelevel, cateid} = target.dataset;
+      let { catename, catelevel, cateid } = target.dataset;
       if(catename){
-        this.$router.push({name: 'Search', query: {categoryName: catename, categoryLevel: catelevel, categoryId: cateid}});
+        this.$router.push({name: 'Search', query: {categoryName: catename, categoryLevel: catelevel, categoryId: cateid}, params: { keyword: '' }});
       }
       // this.$router.push({name:'Search', params: {keyword: this.searchKeyword}, query: {k: this.searchKeyword}});
     },

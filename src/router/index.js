@@ -14,6 +14,7 @@ import Home from '@/pages/Home/hm-index.vue'
 import Login from '@/pages/Login/lg-index.vue'
 import Register from '@/pages/Register/rg-index.vue'
 import Search from '@/pages/Search/sc-index.vue'
+import Detail from '@/pages/Detail/de-index.vue'
 export default new VueRouter({
     routes: [
         {
@@ -54,5 +55,13 @@ export default new VueRouter({
                 footerShow: true,
             }
         },
+        {
+            path: '/detail/:skuid',
+            name: 'Detail',
+            component: Detail,
+            meta: {
+                footerShow: true
+            }
+        }
     ]
 })

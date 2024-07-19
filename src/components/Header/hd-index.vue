@@ -8,7 +8,7 @@ export default {
   },
   methods: {
     goSearchPage(){
-      this.$router.push({name:'Search', params: {keyword: this.searchKeyword}, query: {k: this.searchKeyword}});
+      this.$router.push({name:'Search', params: {keyword: this.searchKeyword}, query: {}});
     }
   }
 }

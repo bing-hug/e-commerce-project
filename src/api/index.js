@@ -9,3 +9,12 @@ export const reqCategoryList = ()=>requests({
 
 export const reqBanner = ()=>mockAjax.get('/banner');
 export const reqFloor = ()=>mockAjax.get('/floor');
+export const reqSearchList = (params)=>requests({
+    url: '/list',
+    method: 'post',
+    data: params
+});
+export const reqGoodInfo = (skuid)=>requests({
+    url: `/item/${skuid}`,
+    method: 'get'
+})
