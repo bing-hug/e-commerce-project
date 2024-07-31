@@ -23,7 +23,6 @@ import Swiper from "swiper/bundle";
     },
     methods: {
       changeIndex(index) {
-        console.log(this);
         this.currentIndex = index;
         this.$bus.$emit("getIndex", this.currentIndex);
       },

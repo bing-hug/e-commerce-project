@@ -4,9 +4,6 @@ import Swiper from "swiper/bundle";
 export default {
   name: "ca-index",
   props: ['list'],
-  mounted() {
-    console.log(this.list);
-  },
   watch:{
     list: {
       immediate: true,

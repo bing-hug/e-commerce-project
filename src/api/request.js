@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import store from "@/store";
 const request = axios.create({
     baseURL: '/api',
     timeout: 5000
@@ -7,6 +7,12 @@ const request = axios.create({
 
 //请求拦截器
 request.interceptors.request.use((config)=>{
+    if(store.state.detail.uuidToken){
+        config.headers.userTempId = store.state.detail.uuidToken
+    }
+    if(localStorage.getItem('Token')){
+        config.headers.Token = localStorage.getItem('Token')
+    }
     return config
 });
 

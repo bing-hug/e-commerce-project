@@ -28,6 +28,21 @@ export default {
       });
       spuSaleAttrValue.isChecked = "1";
     },
+    async addShopCar(){
+      try{
+        await this.$store.dispatch('detail/addShopCar', {
+          skuId: this.$route.params.skuid,
+          skuNum: this.goodCount
+        });
+        sessionStorage.setItem("skuInfo", JSON.stringify(this.skuInfo));
+        this.$router.push({
+          name: "AddShopCar",
+          query: { skuNum: this.goodCount },
+        });
+      }catch (error){
+        alert(error.message);
+      }
+    }
   },
   watch: {
     $route: {
@@ -127,7 +142,7 @@ export default {
                 <a href="javascript:" class="mins" @click="goodCount > 1 ? goodCount-- : goodCount=1">-</a>
               </div>
               <div class="add">
-                <a href="javascript:">加入购物车</a>
+                <a href="javascript:" @click="addShopCar">加入购物车</a>
               </div>
             </div>
           </div>

@@ -144,7 +144,6 @@ export default {
       this.$router.push({name: 'Search', query: {}, params: {keyword: ''}});
     },
     tracemarkInfo(brand){
-      console.log(brand);
       this.searchParams.trademark = `${brand.tmId}:${brand.tmName}`;
       this.search();
       this.searchParams.trademark = '';
@@ -166,7 +165,6 @@ export default {
       this.search();
     },
     paginationChange(pageNo){
-      console.log(pageNo);
       this.searchParams.pageNo = pageNo;
       this.search();
     },

@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     searchBrand(brand){
-      console.log(brand);
       this.$emit('tracemarkInfo', brand);
     },
     searchAttr(attr, attrVal){
